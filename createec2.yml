@@ -1,0 +1,14 @@
+---
+- hosts: localhots
+  tasks:
+    - name: Create an EC2 instance
+      ec2:
+        key_name: iamuser
+        instance_type: t2.micro
+        image: ami-06e38dbb96747d6ca
+        wait: yes
+        region: us-east-1
+       # group: webserver
+        count: 1
+        vpc_subnet_id: subnet-ea4d12cb
+        assign_public_ip: yes
