@@ -1,5 +1,5 @@
 ---
-- hosts: localhots
+- hosts: localhost
   tasks:
     - name: Create an EC2 instance
       ec2:
